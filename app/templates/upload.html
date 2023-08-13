@@ -1,0 +1,24 @@
+```html
+{% extends "base.html" %}
+
+{% block content %}
+<div class="uploadForm">
+    <h2>Upload your 3D Model</h2>
+    <form action="{{ url_for('uploadFile') }}" method="post" enctype="multipart/form-data">
+        <label for="fileUpload">Select a 3D file:</label>
+        <input type="file" id="fileUpload" name="fileUpload" accept=".3mf, .stl">
+        <br>
+        <label for="filament_type">Select Filament Type:</label>
+        <select id="filament_type" name="filament_type">
+            <option value="PLA">PLA</option>
+            <option value="PETG">PETG</option>
+        </select>
+        <br>
+        <label for="infill_percentage">Infill Percentage:</label>
+        <input type="number" id="infill_percentage" name="infill_percentage" min="0" max="100" value="20">
+        <br>
+        <input type="submit" value="Upload">
+    </form>
+</div>
+{% endblock %}
+```

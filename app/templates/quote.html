@@ -1,0 +1,23 @@
+```html
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2>3D Printing Quote</h2>
+    <div id="modelPreview" class="modelViewer"></div>
+    <div class="quote-details">
+        <h3>Quote Details:</h3>
+        <p>Filament Type: {{ filament_type }}</p>
+        <p>Filament Cost Price: {{ filament_cost_price }}</p>
+        <p>Filament Sale Price: {{ filament_sale_price }}</p>
+        <p>Gross Profit Margin: {{ gross_profit_margin }}</p>
+        <p>Infill Percentage: {{ infill_percentage }}</p>
+    </div>
+    <div id="priceDisplay" class="priceDisplay">
+        <h3>Price: </h3>
+        <p>{{ price }}</p>
+    </div>
+    <button onclick="window.location.href='/upload'">Upload Another File</button>
+</div>
+{% endblock %}
+```

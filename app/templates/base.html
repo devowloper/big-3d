@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Printing Quote Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>3D Printing Quote Calculator</h1>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>© 2022 3D Printing Quote Calculator</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/3d_model_viewer.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/price_calculator.js') }}"></script>
+</body>
+</html>
